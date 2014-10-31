@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	<div id="department" class="next_div"
+		style="min-width: 100px; width: 45%;">
+		<rich:panel id="department_panel"
+				 	styleClass="inner-panel"
+					style="background-color: #{richSkin.additionalBackgroundColor};">
+			<f:facet name="header">Підрозділи</f:facet>
+			<h:panelGrid columns="2" cellpadding="2px" style="margin: -5px;"
+				 columnClasses=",lastColumn">
+				<h:outputLabel for="cmbDepartment" value="Підрозділ:" />
+				<h:selectOneMenu id="cmbDepartment" 
+						required="false"
+						styleClass="last-column-input"
+						value="#{documentInfo.selectedDepartment}"
+						onchange="selectDepartment(this.value);" >
+					<f:selectItems value="#{documentInfo.departmentsList}"
+						var="item"
+					    itemLabel="#{item[1]}"
+					    itemValue="#{item[0]}"/>
+				</h:selectOneMenu>
+				<h:outputLabel for="edDepartment1" value="Підрозділ_1:" />
+				<h:outputText id="edDepartment1" value="#{documentInfo.getDepartmentName(1)}"
+					styleClass="last-column-input"/>
+				<h:outputLabel for="edDepartment2" value="Підрозділ_2:" />
+				<h:outputText id="edDepartment2" value="#{documentInfo.getDepartmentName(2)}"
+					styleClass="last-column-input"/>
+				<h:outputLabel for="edDepartment3" value="Підрозділ_3:" />
+				<h:outputText id="edDepartment3" value="#{documentInfo.getDepartmentName(3)}"
+					styleClass="last-column-input"/>
+				<h:outputLabel for="edDepartment4" value="Підрозділ_4:" />
+				<h:outputText id="edDepartment4" value="#{documentInfo.getDepartmentName(4)}"
+					styleClass="last-column-input"/>
+				<h:outputLabel for="edDepartment5" value="Підрозділ_5:" />
+				<h:outputText id="edDepartment5" value="#{documentInfo.getDepartmentName(5)}"
+					styleClass="last-column-input"/>
+			</h:panelGrid>
+		</rich:panel>
+		<rich:panel id="chiefInfoPanel"
+				 	styleClass="inner-panel"
+					style="background-color: #{richSkin.additionalBackgroundColor}; white-space: nowrap;">
+			<f:facet name="header">Керівник підрозділу</f:facet>		
+			<h:panelGrid columns="2" cellpadding="2px" columnClasses=",lastColumn">
+				<h:outputLabel for="edBossPosition" value="Посада:" />
+				<h:inputText id="edBossPosition" value="#{documentInfo.bossPosition}"
+					styleClass="last-column-input" />
+				<h:outputLabel for="edBossPib" value="ПІБ керівника:" />
+				<h:inputText id="edBossPib" value="#{documentInfo.bossPib}"
+					styleClass="last-column-input" />			
+			</h:panelGrid>
+		</rich:panel>
+	</div>
+
+	<a4j:jsFunction name="selectDepartment"
+		action="#{documentInfo.selectDepartment}"
+		render="edBossPosition, edBossPib">
+		<a4j:param name="param" assignTo="#{documentInfo.selectedDepartment}" />		
+	</a4j:jsFunction>
+
+
+</ui:composition>

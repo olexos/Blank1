@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+	<div id="employee" class="left_div" style="min-width: 150px; width: 30%;"> 
+		<rich:panel id="employee_info_panel"
+				styleClass="inner-panel"
+				style="background-color: #{richSkin.additionalBackgroundColor}; white-space: nowrap;">
+			<f:facet name="header">Інформація про співробітника</f:facet>
+			<div style="padding-bottom: 10px;" >
+				<h:outputLabel for="cmbPib" value="ПІБ:" />	<br/>
+				<rich:select id="cmbPib" enableManualInput="true" 
+			    	       styleClass="rf-select-small-width input.rf-sel-inp" >
+ 					<f:selectItems/>
+ 				</rich:select>
+ 			</div>
+			<h:panelGrid columns="2" cellpadding="5px" style="margin: -5px;"
+						columnClasses=",lastColumn">
+				<h:outputLabel for="edSurname" value="Прізвище:" />
+				<h:inputText id="edSurname" value="#{documentInfo.surname}"
+				 	styleClass="last-column-input"/>
+				<h:outputLabel for="edName" value="Ім'я:" />
+				<h:inputText id="edName" value="#{documentInfo.name}" 
+					 styleClass="last-column-input"/>
+				<h:outputLabel for="edSecname" value="По-батькові:" />
+				<h:inputText id="edSecname" value="#{documentInfo.secondname}"
+				 	 styleClass="last-column-input"/>
+			</h:panelGrid>
+		</rich:panel>
+		<rich:panel id="rekvis_panel"
+		 		styleClass="inner-panel"
+		  		style="background-color: #{richSkin.additionalBackgroundColor}; white-space: nowrap;">
+			<f:facet name="header">Реквізити</f:facet>
+			<h:panelGrid columns="2" cellpadding="5px" style="margin: -5px;"
+						columnClasses=",lastColumn">
+				<h:outputLabel for="tabNum" value="Табельний номер:" />
+				<h:inputText id ="tabNum" value="#{documentInfo.tabNum}"
+				 			styleClass="last-column-input"/>
+				<h:outputLabel for="identCode" value="Ідентифікаційний код:" />
+				<h:inputText id ="identCode" value="#{documentInfo.identCode}"
+							styleClass="last-column-input"/>
+			</h:panelGrid>
+		</rich:panel>  		
+	</div>
+</ui:composition>
+								

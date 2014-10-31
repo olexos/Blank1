@@ -1,0 +1,270 @@
+html,body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.float_div {
+	position: relative;
+	float: left;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+.left_div {
+	position: fised;
+	float: left;
+	left: 2px;
+}
+
+.next_div {
+	float: left;
+    display: inline-block;	
+	position: relative;
+	overflow: hidden;
+}
+
+.labelColumn {
+ 	white-space: nowrap;
+} 
+
+.lastColumn {
+	min-width: 30%;
+	max-width: 100%;
+	width: 100%;
+	text-align: left;
+	padding: 5px;
+	margin: 0px;
+}
+
+.last-column-input {
+	width: 100%;
+}
+
+.otherColumn {
+	min-width: 60px;
+	width: 60px;
+	min-height: 30px;
+	height: 30px;
+	text-align: right;
+	padding: 0px;
+	margin: 0px;
+}
+
+.lastColumnRight {
+	width: 100%;
+	text-align: right;
+}
+
+.rf-select-small-width input[type="text"] {
+    width: 210px; 
+}
+
+.inner-panel {
+	margin-right: 5px;
+	margin-bottom: 5px;
+
+}
+
+/*
+
+#top {
+	position: relative;
+	background-color: #036fab;
+	color: white;
+	padding: 5px;
+	margin: 0px 0px 10px 0px;
+}
+
+#bottom {
+	position: relative;
+	background-color: #c2dfef;
+	padding: 5px;
+	margin: 10px 0px 0px 0px;
+}
+
+#left {
+	position: fixed;
+	float: left;
+	left: 8px;
+	background-color: #ece2a1;
+	padding: 2px;
+	width: 220px;
+	height: 92%;
+}
+
+#right {
+	float: right;
+	background-color: #ece2a1;
+	padding: 5px;
+	width: 100px;
+}
+
+#wfparams {
+	visibility: hidden;
+	height: 1px;
+	position: relative;
+}
+
+#hseparator {
+	cursor: s-resize;
+	position: relative;
+	float: left;
+	display: block;
+	background-color: #ece2a1;
+	font-size: 0px;
+	height: 1px;
+	width: 100%;
+	border: 1px solid gray;
+}
+
+.center_content {
+	position: fixed;
+	float: left;
+	background-color: #dddddd;
+	padding: 5px;
+}
+
+.left_content {
+	border-color: #ece2a1;
+	border-style: solid;
+	border-width: 2px;
+	padding: 0px;
+	height: 92%;
+	width: 100% - 220px;
+}
+
+._content {
+	background-color: #dddddd;
+	padding: 5px;
+	margin: 0px 170px 0px 170px;
+}
+
+.leftnewclass {
+	position: fixed;
+	float: left;
+	background-color: #ece2a1;
+	padding: 2px;
+	height: 100%;
+}
+
+
+.selectedtreenode {
+	background-color: blue;
+}
+
+.loginbottompanel {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 0px 0px 11px 0px;
+	margin: 0px 0px 0px 0px;	
+	height: 40px;
+	min-height: 30px;
+	border-style: outset inset inset solid;	
+
+}
+
+.bottompanel {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding: 7px 0px 7px 0px;
+	min-height: 40px;
+	margin: 0px 0px 0px 0px;
+	border-style: ridge outset inset;
+}
+
+.firstColumn {
+	min-width: 70px;
+	width: 200px;
+	text-align: left;
+}
+
+.lastColumn {
+	min-width: 30%;
+	max-width: 100%;
+	width: 100%;
+	text-align: left;
+	padding: 5px;
+	margin: 0px;
+}
+
+.otherColumn {
+	min-width: 60px;
+	width: 60px;
+	min-height: 30px;
+	height: 30px;
+	text-align: right;
+	padding: 0px;
+	margin: 0px;
+}
+
+.lastColumnRight {
+	width: 100%;
+	text-align: right;
+}
+
+.buttonStyle {
+	min-width: 50px;
+	min-height: 25px;
+	width: 50px;
+	height: 25px;
+	margin-right: 5px;
+}
+
+.rsToolImage {
+	border-style: none;
+	width: 16px;
+	height: 16px;
+}
+
+.rsToolButton {
+	border-width: 1px;
+	border-color: #B7C1CA;
+	border-style: ridge;
+	width: 16px;
+	height: 16px;
+}
+
+.rsTableButton {
+	border-width: 1px;
+	border-style: outset;	
+	border-color: #B7C1CA;				
+	width: 16px;
+	height: 16px;
+}
+
+.editpanel {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	margin: 0px 0px 0px 0px;
+	padding-top: 10px;
+	border-style: none;
+}
+
+.rightAlign {
+	text-align: right;
+}
+
+.edmessagebody {
+	color: red;
+	font-size: small;
+}
+
+.errormessagebody {
+    position: fixed;
+    top: 30px;
+    left: 15%;
+    width: 70%;
+    color: red;
+    text-align: center;
+}
+
+*/

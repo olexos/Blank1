@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:rich="http://richfaces.org/rich">
+
+<h:head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+    <title>
+        <ui:insert name="pageTitle">Page Title</ui:insert>
+    </title>
+    <style type="text/css">
+   		.panelbackgr {
+    		background-color: #{richSkin.additionalBackgroundColor};
+	    }
+   		.resizepanelbackgr {
+    		background-color: #{richSkin.additionalBackgroundColor};
+    		width: 100%;
+    		height: 100%;
+			overflow: auto;
+	    }
+	</style>
+    <link href="/Blank/resources/css/cssLayout.css" rel="stylesheet"
+	   type="text/css" />
+	 <script type="text/javascript" src="/Blank/resources/scripts/Blank.js"></script>
+</h:head>
+
+<h:body>
+<h:form id="main_form">
+	<div class="float_div" style="height: 40px">
+		<rich:panel id="topheaderpanel" styleClass="rf-p-hdr"
+				style="height: 100%; text-align: left;">			
+		</rich:panel>		    
+	</div>
+    <div class="float_div" 
+         style="width: 100%; height: 92%; background-color: #{richSkin.additionalBackgroundColor}" >
+		 <div id="bodypanel" class="resizepanelbackgr" >
+		 	<ui:include src="commoninfopanel.xhtml" />
+		 	<ui:include src="detailtabpanel.xhtml" />
+		 </div>
+    </div>
+
+    <button type="submit" value="Подтвердить"/>
+</h:form>    
+</h:body>
+
+
+</html>

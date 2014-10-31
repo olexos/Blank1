@@ -1,0 +1,6 @@
+/**
+ * 
+ */
+function selectDepartmentJs() {
+	alert("!!!!!!!");
+}
